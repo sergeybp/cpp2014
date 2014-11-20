@@ -27,20 +27,25 @@ private:
     epl weight;
 public:
 
+    //Constructor
     Edge(Node<npl, epl>*, Node<npl, epl>*, epl);
 
+    //Get previous node(this edge starts there)
     Node<npl, epl>* getPrevious() const {
         return previous;
     }
 
+    //Get next node(this edge finishes there)
     Node<npl, epl>* getNext() const {
         return next;
     }
 
+    //Get edge's weight
     epl getWeight() const {
         return weight;
     }
 
+    //Check if 2 nodes are connected by this edge
     bool connects(Node<npl, epl>* node1, Node<npl, epl>* node2) const {
         return ((node1 == this->previous && node2 == this->next) || (node1 == this->next && node2 == this->previous));
     }

@@ -31,17 +31,22 @@ private:
     npl inf;
 public:
 
+    //Constructor
     Node(size_t, npl);
 
+    //Get node indentificator
     size_t getPoint() const {
         return point;
     }
 
+
+    //Get all edges, starting in this node
     vector<Edge<npl, epl>*>* getGTable() const {
         return gTable;
     }
 
 
+    //Get node content
     npl &getInf() {
         return inf;
     }
